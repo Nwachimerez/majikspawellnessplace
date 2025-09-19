@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<htm lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JustyBeauty_Lounge</title>
+    <title>Majik Spa & Wellness place</title>
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="icon" href="image/beauty.jpg">
+    <link rel="icon" href="image/WhatsApp Image 20.jpg">
 
     <style>
+      body{
+        background-color: rgb(240, 237, 234);
+      }
         .two h1{
             margin-bottom: 15px;
         }
@@ -69,14 +72,308 @@
         background-color: orangered;
         border-radius: 8px;
     }
+    a:hover{
+      background-color: gray;
+      border: 8;
+      box-shadow: 0 4px 8px;
+    }
+    .current{
+      display: block;
+      margin-top: 80px;
+    }
+    @media (min-width: 768px) {
+      .current{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth; }
+
+      .booknow-top {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   background: linear-gradient(135deg, #FF4081, #F50057);
+   color: white;
+   padding: 12px 25px;
+   font-size: 16px;
+   font-weight: bold;
+   border-radius: 30px;
+   text-decoration: none;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+   z-index: 1000;
+   transition: transform 0.2s, background 0.2s;
+}
+.booknow-top:hover {
+   transform: scale(1.05);
+   background: linear-gradient(135deg, #e73370, #d5004f);
+   cursor: pointer;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+   position: fixed;
+   width: 60px;
+   height: 60px;
+   bottom: 20px;
+   right: 20px;
+   background-color: #25D366;
+   color: white;
+   border-radius: 50%;
+   text-align: center;
+   box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+   z-index: 1000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: transform 0.2s;
+}
+.whatsapp-float:hover {
+   transform: scale(1.1);
+   cursor: pointer;
+}
+.whatsapp-float img {
+   width: 48px;
+   height: 48px;
+}
+
+/* Tooltip */
+.tooltip-text {
+   visibility: hidden;
+   width: 120px;
+   background-color: black;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   position: absolute;
+   bottom: 70px;
+   right: 50%;
+   transform: translateX(50%);
+   font-size: 14px;
+   z-index: 1001;
+   opacity: 0;
+   transition: opacity 0.3s;
+}
+.whatsapp-float:hover .tooltip-text {
+   visibility: visible;
+   opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+   .booknow-top {
+       top: 15px;
+       right: 15px;
+       padding: 10px 20px;
+       font-size: 14px;
+   }
+   .whatsapp-float {
+       width: 50px;
+       height: 50px;
+       bottom: 15px;
+       right: 15px;
+   }
+   .whatsapp-float img {
+       width: 40px;
+       height: 40px;
+   }
+   .tooltip-text {
+       bottom: 60px;
+       font-size: 12px;
+       width: 100px;
+   }
+}
+ .hero {
+      height: 50vh;
+      background: url("your-hero-image.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    /* Dark overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+ .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 5px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      background: #ff4081;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .hero .btn:hover {
+      background: #e73370;
+    }
+
+    /* Service highlights */
+    .highlights {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .highlight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+   #services {
+      padding: 80px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    #services h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+    }
+
+#contact {
+      padding: 80px 20px;
+      background: #f3f3f3;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    #contact p {
+      margin-bottom: 30px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .contact-info h3 {
+      margin: 10px 0 5px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+     .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      border: none;
+      background: #037913;
+      color: white;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #777774a4;
+    }
+  /* Responsive */
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      .hero p {
+        font-size: 1.5rem;
+      }
+      .highlights {
+        gap: 50px;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+      }
+    }
+body{
+      background-color: #F9F6F7;
+      color: #2C2C2C;
+    }
+
+
     </style>
 </head>
 <body>
 
-    
-        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-2">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-2 mt-5 pr-5">
   <div class="container-fluid">
-    <a class="navbar-brand " href="#">JB_Lounge</a>
+    <a class="navbar-brand " href="#">MajikSpa&</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -86,7 +383,7 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="about.html">About Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="book.html">Booking</a>
@@ -96,7 +393,7 @@
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="price.html">Services and Prices</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -117,22 +414,160 @@
         <video autoplay loop muted playsinline style="position: absolute; top: 50%;left: 50%;
         transform: translate(-50%, -50%);min-width: 100%;min-height: 100%; width: auto;height: auto;
         object-fit: cover;">
-            <source src="image/vid.mp4" type="video/mp4">
+            <source src="image/WhatsApp Video 21.mp4" type="video/mp4">
         </video>
 
         <div class="one">
-        <img src="image/beauty.jpg" class="video-overlay top-left" width="80" style="border-radius: 50px;" alt="">
+        <img src="image/WhatsApp Image 0.jpg" class="video-overlay top-left" width="80" style="border-radius: 50px;" alt="">
     </div>
         <div class="content-overlay">
-       <h1>JustyBeauty_Lounge</h1>
-       <h6>Where style meets serenity</h6>
+       <h1>Majik Spa & Wellness Place</h1>
+       <h5>Where style meets serenity</h5>
         </div>
         </div>
         </div>
      </div>
-     <div>
-      <a href="book.html"><button class="btn">Booking</button></a>
+     <div class="container">
+      <a href="book.html"><button class="btn">Book Now  & Glow</button></a>
      </div>
+
+     <div class="adress" style="margin-top: 20px; font-size: xx-large;">
+      <marquee behavior="" direction="">Majik Spa & Wellness Place is located @  No. 49,Chime avenue,New heaven, Enugu State, Nigeria.</marquee>
+     </div>
+       <div class="current">
+     <div class="tagli" style="border: 8px;
+        box-shadow: 0px 8px 10px 4px ; margin-bottom: 25px; padding-left: 10px;">
+      <h2 style="text-align: center; font-style: oblique;color: rgb(94, 94, 3); margin-bottom: 20px;">Step in,Glow Out</h2>
+      <p>Discover Enugu's ultimate destination for beauty, style, and relaxation. At Majik Spa & Wellness Place, we bring together luxury,
+        wellness, and professional care under one roof. From hair to nails, tattoos to massages, we have created the perfect space for you to look and feel absolute best.
+      </p>
+      <p>Welcome to Majik Spa & Wellness Place 
+      Located at No. 49,Chime avenue,New heaven, Enugu, Majik Spa & Wellness Place is your all-in-one destination for beauty, grooming, and relaxation.
+     </p>
+     <p>From the moment you walk into our reception, you are welcomed into an atmosphere of elegance and comfort.</p>
+     <p>Our cosmetic section is stocked with premium products to meet every beauty need, while our barbing salon delivers trendy and classic styles with precision. For lovers of body art, our tattoo parlor offers a safe space for creativity and expression.</p>
+    <p>Upstairs, our air lounge provides a stylish and relaxing environment for you to unwind. We also sell premium-quality hairs for ladies and offer professional hair-making services to complete your look.</p>
+    <p>n our lashes and makeup room, artistry meets beauty, while our nails section and manicure & pedicure area bring elegance to your hands and feet.</p>
+    <p>For relaxation, we offer a variety of massage experiences — a single massage section for personal sessions, a couples massage section for shared moments, and a foot massage machine section for quick, refreshing comfort.</p>
+  <p>At Majik Spa & Wellness Place, every room is designed to give you the perfect blend of beauty, style, and relaxation — all under one roof.</p>
+  </div>
+
+     <div class="container">
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="image/WhatsApp Image 0.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="image/nail technician.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="image/hair.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<div>
+  <a href="https://wa.me/2347038488244?text=Hello%20Majik%20Spa%20&%20Wellness%20Place%20👋%2C%0AI’d%20like%20to%20book%20a%20session.%20Here%20are%20my%20details%3A%0A%0A✨%20Name%3A%20%5BYour%20Name%5D%0A📞%20Phone%3A%20%5BYour%20Phone%20Number%5D%0A💇%20Service%20Needed%3A%20%5BHair%20%2F%20Makeup%20%2F%20Nails%20%2F%20Massage%20%2F%20Tattoo%20%2F%20Barbing%20%2F%20Couples%20Massage%5D%0A📅%20Preferred%20Date%3A%20%5BChoose%20Date%5D%0A⏰%20Time%3A%20%5BChoose%20Time%5D%0A%0AThank%20you!%20🌸" 
+   class="whatsapp-float" target="_blank">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+   <span class="tooltip-text">Chat with us</span>
+</a>
+</div>
+     </div>
+
+     <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Majik Spa & Wellness Place</h1>
+      <p>Luxury treatments, relaxation, and beauty redefined in Abuja.</p>
+
+       <div class="highlights">
+        <div class="highlight">
+          <span>💇‍♀</span>
+          <p>Hair & Styling</p>
+        </div>
+        <div class="highlight">
+          <span>💅</span>
+          <p>Nails & Beauty</p>
+        </div>
+        <div class="highlight">
+          <span>💆‍♂</span>
+          <p>Spa & Massage</p>
+        </div>
+        <div class="highlight">
+          <span>🎨</span>
+          <p>Tattoo Art</p>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div>
+        <a href="#services" class="btn">Explore Services</a>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
+
+ <!-- Contact Info -->
+      <p>📍  No. 49,Chime avenue,New heaven, Enugu | ☎ +234 805 906 7493</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>💇‍♀ Hair Styling</h3>
+        <p>Professional cuts, styling, and treatments for all hair types.</p>
+      </div>
+      <div class="service-card">
+        <h3>💅 Nails & Beauty</h3>
+        <p>Luxury manicures, pedicures, and custom nail art.</p>
+      </div>
+      <div class="service-card">
+        <h3>💆 Spa & Massage</h3>
+        <p>Relaxing single, couple, and foot massage treatments.</p>
+      </div>
+      <div class="service-card">
+        <h3>🎨 Tattoo Art</h3>
+        <p>Creative, safe, and professional tattoo services.</p>
+      </div>
+    </div>
+  </section>
+
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>📍 Address</h3>
+        <p> No. 49,Chime avenue,New heaven, Enugu</p>
+
+        <h3>📞 Phone</h3>
+        <p><a href="tel:+2348059067493">Call Us</a></p>
+
+        <h3>📧 Email</h3>
+        <p><a href="uchennabenjamin725@gmail.com">Email Us</a></p>
+      </div>
+
+  <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
     <script src="bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</htm

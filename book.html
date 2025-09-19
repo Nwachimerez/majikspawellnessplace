@@ -5,11 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking-page</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+       /* Optional styling for clarity */
+    #typewriter {
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      /* A right border to mimic a cursor */
+      border-right: 2px solid;
+      display: inline-block;
+      padding-left: 80px;
+      margin-top: 40px;
+    }
+
+    /* Blinking cursor animation */
+    @keyframes blink {
+      0%, 40% { border-color: white; }
+      60%, 100% { border-color: transparent; }
+    }
+
+    #typewriter {
+      animation: blink 0.7s step-end infinite;
+    }
+
+    body{
+      background-color: #F9F6F7;
+      color: #2C2C2C;
+    }
+
+    </style>
 </head>
 <body>
+ <nav class="navbar navbar-expand-lg bg-body-tertiary mt-5 pr-5">
+  <div class="container-fluid">
+    <a class="navbar-brand text-warning" href="#">Majiki Spa & Wellness Place</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="price.html">Services and Prices</a></li>
+            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
     <div class="container mt-5">
   <h1 class="text-center">Book Your Appointment</h1>
-  <form>
+  <form " action="https://formsubmit.co/uchennabenjamin725@gmail.com" method="post">
     <div class="mb-3">
       <label for="name" class="form-label">Your Name:</label>
       <input type="text" class="form-control" id="name" name="name">
@@ -27,19 +87,133 @@
       <select class="form-select" id="time" name="time">
         <option value="9:00 AM">9:00 AM</option>
         <option value="10:00 AM">10:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="1:00 PM">1:00 M</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <option value="3:00 PM">3:00 PM</option>
       </select>
     </div>
     <div class="mb-3">
-      <label for="service" class="form-label">Select Service:</label>
-      <select class="form-select" id="service" name="service">
-        <option value="service1">Service 1</option>
-        <option value="service2">Service 2</option>
-      </select>
-    </div>
+  <label class="form-label">Select Services:</label><br>
+
+  <label><input type="checkbox" name="services[]" value="Barbbing"> Barbbing</label><br>
+  <label><input type="checkbox" name="services[]" value="Dread Locks"> Dread Locks</label><br>
+  <label><input type="checkbox" name="services[]" value="Make-Up"> Make-Up</label><br>
+  <label><input type="checkbox" name="services[]" value="Natural Hair Styling"> Natural Hair Styling</label><br>
+  <label><input type="checkbox" name="services[]" value="Boho Human Hair Braids"> Boho Human Hair Braids</label><br>
+  <label><input type="checkbox" name="services[]" value="Knotless/Box Braids"> Knotless/Box Braids</label><br>
+  <label><input type="checkbox" name="services[]" value="Ghana Weaving"> Ghana Weaving/Straight Back Cornrows</label><br>
+  <label><input type="checkbox" name="services[]" value="Stitch Feed in Braids"> Stitch Feed in Braids</label><br>
+  <label><input type="checkbox" name="services[]" value="Ponytail"> Ponytail</label><br>
+  <label><input type="checkbox" name="services[]" value="Weaves"> Weaves</label><br>
+  <label><input type="checkbox" name="services[]" value="Feed in Braids"> Feed in Braids</label><br>
+  <label><input type="checkbox" name="services[]" value="Coloured Services"> Coloured Services</label><br>
+  <label><input type="checkbox" name="services[]" value="Wigs"> Wigs</label><br>
+  <label><input type="checkbox" name="services[]" value="Frontal Installation"> Frontal Installation</label><br>
+  <label><input type="checkbox" name="services[]" value="Hair Treatment"> Hair Treatment</label><br>
+ <label><input type="checkbox" name="services[]" value="Nails"> Nails</label><br>
+  <label><input type="checkbox" name="services[]" value="Lash Extension"> Lash Extension</label><br>
+  <label><input type="checkbox" name="services[]" value="Piercing"> Piercing</label><br>
+  <label><input type="checkbox" name="services[]" value="Teeth Whitening"> TEETH: laser teeth whitening</label><br>
+  <label><input type="checkbox" name="services[]" value="Tattoo"> Tattoo</label><br>
+  <label><input type="checkbox" name="services[]" value="Pedicure/Medicure"> Pedicure/Medicure</label><br>
+  <label><input type="checkbox" name="services[]" value="Pedicure"> Pedicure</label><br>
+  <label><input type="checkbox" name="services[]" value="Medicure"> Medicure</label><br>
+  <label><input type="checkbox" name="services[]" value="Spa Services"> Spa Services</label><br>
+  <label><input type="checkbox" name="services[]" value="Hamman"> Hamman (Body Scrub)</label><br>
+  <label><input type="checkbox" name="services[]" value="Facials"> Facials</label><br>
+  <label><input type="checkbox" name="services[]" value="Home Service Facial"> Home Service Facial</label><br>
+  <label><input type="checkbox" name="services[]" value="Waxing"> Waxing (Women)</label><br>
+  <label><input type="checkbox" name="services[]" value="Packages"> PACKAGES and BUNDLES</label><br>
+</div>
     <button type="submit" class="btn btn-primary">Book Now</button>
   </form>
 </div>
-   <script src="bootstrap.bundle.min.js"></script> 
 
+<p id="typewriter"></p>
+
+
+<div class="container">
+  <div class="hel">
+    <h1><marquee behavior="" direction="right">
+      <img src="image/hair.jpg" width="260px" height="260px" alt="">
+  <img src="image/haal.jpg" width="260px" height="260px" alt="">
+ <img src="image/hair dressing.jpg" width="260px" height="260px" alt="">
+  <img src="image/heer.jpg" width="260px" height="260px" alt="">
+<img src="image/pexhair.jpg" width="260px" height="260px" alt="">
+</marquee></h1>
+  <h1><marquee behavior="" direction="left">
+    <img src="image/pedicure.jpg" width="260px" height="260px" alt="">
+    <img src="image/nail technician.jpg" width="260px" height="260px" alt="">
+    <img src="image/nalla.jpg" width="260px" height="260px" alt="">
+    <img src="image/pedi.jpg" width="260px" height="260px" alt="">
+  </marquee></h1>
+  </div>
+</div>
+
+<div class="contact-grid" style="text-align: center;">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>📍 Address</h3>
+        <p style="font-size: xx-large;font-weight: 800;"> No. 49,Chime avenue,New heaven, Enugu</p>
+       <h3>📞 Phone</h3>
+        <p><a href="tel:+2348059067493">Call Us</a></p>
+
+        <h3>📧 Email</h3>
+        <p><a href="uchennabenjamin725@gmail.com">Email Us</a></p>
+      </div>
+        </div>
+        <div class="rig" style="text-align: center; margin-top: 30px;font-size: x-large;">
+  <p>&copy:2025 Majik Spa & Wellness Place. All rights reserved</p>
+</div>
+   <script src="bootstrap.bundle.min.js"></script> 
+<script>
+    // Array of phrases to display
+    var phrases = ["I am Dr Mrs J.C Mmadu", "a licensed hairstylist", "Massage Therapist & Nail Technician", "Book  an Appointment with us today", "Looking forward to make you look sweet", "Thank You!!!"];
+    var currentPhrase = 0;   // Index of current phrase
+    var currentChar = 0;     // Index of current character in phrase
+
+    // Timing settings (in milliseconds)
+    var typingSpeed = 100;   // Delay between typing each character
+    var erasingSpeed = 50;   // Delay between erasing each character
+    var pauseBetween = 1500; // Pause after a phrase is complete before erasing
+
+    // Reference to the element where text will be displayed
+    var typewriterElement = document.getElementById("typewriter");
+
+    // Function to type the next character of the current phrase
+    function typeNextChar() {
+      if (currentChar < phrases[currentPhrase].length) {
+        // Append next character and schedule next call
+        typewriterElement.textContent += phrases[currentPhrase].charAt(currentChar);
+        currentChar++;
+        setTimeout(typeNextChar, typingSpeed);
+      } else {
+        // Phrase complete; pause, then start erasing
+        setTimeout(eraseText, pauseBetween);
+      }
+    }
+
+    // Function to erase the current phrase one character at a time
+    function eraseText() {
+ if (currentChar > 0) {
+        // Remove last character and schedule next erase
+        typewriterElement.textContent = phrases[currentPhrase].substring(0, currentChar - 1);
+        currentChar--;
+        setTimeout(eraseText, erasingSpeed);
+      } else {
+        // Phrase fully erased; move to next phrase and start typing again
+        currentPhrase = (currentPhrase + 1) % phrases.length;  // Loop back to first phrase as needed4
+        setTimeout(typeNextChar, typingSpeed);
+      }
+    }
+
+    // Start the typing effect after the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      typeNextChar();
+    });
+
+</script>
 </body>
 </html>
